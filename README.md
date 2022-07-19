@@ -1,3 +1,2 @@
 # cpp_tutorials
-C++ Tutorials
-cpptestcommit
+This is a self C++ Tutorial Repository.
