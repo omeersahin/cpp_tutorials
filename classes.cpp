@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class Room {
+class Cube {
 
    public:
     double length;
@@ -19,37 +19,37 @@ class Room {
     }
 };
 
-class Box{
+class Rectangle{
     public:
-        double length,width,breadth;
-        string boxString;
-        Box(){
-            length = 1,width = 1, breadth=1;
+        double length,width,depth;
+        string rectString;
+        Rectangle(){
+            length = 1,width = 1, depth=1;
         }
-        Box(double l, double w,double b){
-            length = l,width = w, breadth = b;
+        Rectangle(double l, double w,double b){
+            length = l,width = w, depth = b;
         }
-        Box& operator ++ (){
+        Rectangle& operator ++ (){
             length++;
             width++;
-            breadth++;
+            depth++;
             return *this;
         }
         operator const char*(){
-            ostringstream boxStream;
-            boxStream << "Box : " << length << "," << width << "," << breadth << endl;
-            boxString = boxStream.str();
-            return boxString.c_str();
+            ostringstream rectStream;
+            rectStream << "Box : " << length << "," << width << "," << depth << endl;
+            rectString = rectStream.str();
+            return rectString.c_str();
         }
-        Box operator +(const Box& box2){
-            Box boxSum;
-            boxSum.length = length + box2.length;
-            boxSum.width = width + box2.width;
-            boxSum.breadth = breadth + box2.breadth;
-            return boxSum;
+        Rectangle operator +(const Rectangle& rect2){
+            Rectangle rectSum;
+            rectSum.length = length + rect2.length;
+            rectSum.width = width + rect2.width;
+            rectSum.depth = depth + rect2.depth;
+            return rectSum;
         }
-        bool operator == (const Box& box2){
-            return ((length==box2.length) && (width==box2.width) && (breadth==box2.breadth));
+        bool operator == (const Rectangle& rect2){
+            return ((length==rect2.length) && (width==rect2.width) && (depth==rect2.depth));
         }
 
 };
