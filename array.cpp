@@ -4,10 +4,10 @@ using namespace std; //std::cout -> cout
 int main(int argc,char** argv)
 {
     
-  int array1[5] = {1};
-  int array2[5] = {2,3,4};
-  int array3[] = {1};
-  int array4[] = {2,3,4};
+  int array1[5] = {8};
+  int array2[5] = {8,9,4};
+  int array3[] = {8};
+  int array4[] = {8,9,4};
 
   cout << "Array1(0) : " << array1[0] << " and Array1(4):" << array1[4] << endl; 
 
